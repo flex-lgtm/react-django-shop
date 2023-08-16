@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'origin_country_register',
     'item_register',
     'incomingDepartment_register',
+    'deposittype_register',
     'storehouse_register',
     'django_extensions',
     # 'rest_framework_simplejwt'

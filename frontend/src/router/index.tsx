@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { useAuth } from "../provider/authProvider";
-import { ProtectedRoute } from "./ProtectedRoute";
+import { ProtectedRoute } from "./ProtectedRoute.tsx";
 import Login from '../pages/Auth/Login';
 import SignUp from "../pages/Auth/SIgnUp";
 import ProductRegister from "../pages/ProductRegister/ProductRegister";
@@ -22,141 +22,7 @@ import DeposittypeRegister from "../pages/DeposittypeRegister/DeposittypeRegiste
 import OrderSlip from "../pages/OrderSlip/OrderSlip";
 import { AuthLayout } from "../layouts/AuthLayout";
 import { DefaultLayout } from "../layouts/DefaultLayout";
-import { Home } from "../pages/Home";
-
-// const Routes = () => {
-// 	const { token } = useAuth();
-
-// 	// Define public routes accessible to all users
-// 	const routesForPublic = [
-// 		{
-// 			path: "/service",
-// 			element: <div>Service Page</div>,
-// 		},
-// 		{
-// 			path: "/about-us",
-// 			element: <div>About Us</div>,
-// 		},
-// 		// "Not Found" route
-// 		{
-// 		path: "*",
-// 		element: <Navigate to="/home" />,
-// 		},
-// 	];
-
-// 	// Define routes accessible only to authenticated users
-// 	const routesForAuthenticatedOnly = [
-// 		{
-// 			element: <ProtectedRoute />, // Wrap the component in ProtectedRoute
-// 			children: [
-// 				{
-// 					path: "/home",
-// 					element: <ItemRegister />,
-// 				},
-// 				{
-// 					path: "/profile",
-// 					element: <div>User Profile</div>,
-// 				},
-// 				{
-// 					path: "/logout",
-// 					element: <div>Logout</div>,
-// 				},
-// 				{
-// 					path: "/product_register",
-// 					element: <ProductRegister />
-// 				},
-// 				{
-// 					path: "/color_register",
-// 					element: <ColorRegister />
-// 				},
-// 				{
-// 					path: "/size_register",
-// 					element: <SizeRegister />
-// 				},
-// 				{
-// 					path: "/season_register",
-// 					element: <SeasonRegister />
-// 				},
-// 				{
-// 					path: "/brand_register",
-// 					element: <BrandRegister />
-// 				},
-// 				{
-// 					path: "/item_register",
-// 					element: <ItemRegister />
-// 				},
-// 				{
-// 					path: "/material_register",
-// 					element: <MaterialRegister />
-// 				},
-// 				{
-// 					path: "/delivery_register",
-// 					element: <DeliveryRegister />
-// 				},
-// 				{
-// 					path: "/charger_register",
-// 					element: <ChargerRegister />
-// 				},
-// 				{
-// 					path: "/dealer_register",
-// 					element: <DealerRegister />
-// 				},
-// 				{
-// 					path: "/exhibition_register",
-// 					element: <ExhibitionRegister />
-// 				},
-// 				{
-// 					path: "/incoming_department_register",
-// 					element: <IncomingDepartmentRegister />
-// 				},
-// 				{
-// 					path: "/origin_country_register",
-// 					element: <OriginCountryRegister />
-// 				},
-// 				{
-// 					path: "/storehouse_register",
-// 					element: <StorehouseRegister />
-// 				},
-// 				{
-// 					path: "/customer_register",
-// 					element: <CustomerRegister />
-// 				},
-// 				{
-// 					path: "/deposittype_register",
-// 					element: <DeposittypeRegister />
-// 				},
-// 				{
-// 					path: "/order_slip",
-// 					element: <OrderSlip />
-// 				}
-// 			],
-// 		},
-// 	];
-
-// 	// Define routes accessible only to non-authenticated users
-// 	const routesForNotAuthenticatedOnly = [
-// 		{
-// 			path: "/login",
-// 			element: <Login />,
-// 		},
-// 		{
-// 			path: "/signup",
-// 			element: <SignUp />
-// 		}
-// 	];
-
-// 	// Combine and conditionally include routes based on authentication status
-// 	const router = createBrowserRouter([
-// 		...routesForPublic,
-// 		...(!token ? routesForNotAuthenticatedOnly : []),
-// 		...routesForAuthenticatedOnly,
-// 	]);
-
-// 	// Provide the router configuration using RouterProvider
-// 	return <RouterProvider router={router} />;
-// };
-
-// export default Routes;
+import { Home } from "../pages/Home";                    
 
 export const Router = () => {
   return (
@@ -181,7 +47,7 @@ export const Router = () => {
         <Route path="origin_country_register" element={<OriginCountryRegister />} />
         <Route path="item_register" element={<ItemRegister />} />
         <Route path="incomingdepartment_register" element={<IncomingDepartmentRegister />} />
-
+        <Route path="deposittype_register" element={<DeposittypeRegister/>}/>
         <Route path="storehouse_register" element={<StorehouseRegister />} />
 
       </Route>

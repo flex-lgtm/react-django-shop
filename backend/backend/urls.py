@@ -35,6 +35,7 @@ urlpatterns = [
     path('origin_country_register/', include('origin_country_register.urls')),
     path('item_register/', include('item_register.urls')),
     path('incomingDepartment_register/', include('incomingDepartment_register.urls')),
+    path('deposittype_register/',include('deposittype_register.urls')),
 
     path('storehouse_register/', include('storehouse_register.urls')),
 

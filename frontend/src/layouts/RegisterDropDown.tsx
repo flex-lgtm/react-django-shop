@@ -130,6 +130,16 @@ export const RegisterDropDown = () => {
                     <FileCopyIcon />
                     <Link to='/item_register'>アイテム登録 </Link>
                 </MenuItem>
+                
+                <MenuItem>
+                    <FileCopyIcon />
+                    <Link to='/incomingDepartment_register'>仕入先登録</Link>
+                </MenuItem>
+                <MenuItem>
+                    <FileCopyIcon />
+                    <Link to='/deposittype_register'>入金支払登録</Link>
+                </MenuItem>
+                
 
                 <Divider sx={{ my: 0.5 }} />
                 <MenuItem onClick={handleClose} disableRipple>

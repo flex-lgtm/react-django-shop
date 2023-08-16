@@ -45,7 +45,7 @@ export default function Login() {
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(!emailRegex.test(formState.email)) {
+    if (!emailRegex.test(formState.email)) {
       validationErrors.email = 'Email is invalid';
     }
 
@@ -143,7 +143,7 @@ export default function Login() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="/signup" variant="body2">
+                <Link href="/auth/signup" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
