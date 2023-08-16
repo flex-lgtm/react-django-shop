@@ -180,6 +180,7 @@ export const Router = () => {
         <Route path="delivery_register" element={<DeliveryRegister />} />   
         <Route path="origin_country_register" element={<OriginCountryRegister />} />
         <Route path="item_register" element={<ItemRegister />} />
+        <Route path="incomingdepartment_register" element={<IncomingDepartmentRegister />} />
 
         <Route path="storehouse_register" element={<StorehouseRegister />} />
 

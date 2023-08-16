@@ -62,7 +62,6 @@ export const Navbar : React.FC = () => {
               Home
             </Link>
             <div className={classes.link}><RegisterDropDown/></div>
-            <div className={classes.link}><SlipDropDown/></div>
             <Link to="/auth/login" className={classes.link}>
               Login
             </Link>

@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 # from rest_framework import routers
-from product_register import views
+# from product_register import views
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -33,6 +33,8 @@ urlpatterns = [
     path('size_register/', include('size_register.urls')),
     path('delivery_register/', include('delivery_register.urls')),
     path('origin_country_register/', include('origin_country_register.urls')),
+    path('item_register/', include('item_register.urls')),
+    path('incomingDepartment_register/', include('incomingDepartment_register.urls')),
 
     path('storehouse_register/', include('storehouse_register.urls')),
 
